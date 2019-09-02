@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Argumentative", "Argumentative.csproj", "{6F86DDC8-0E2F-4685-80E6-B7DB33F22E4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Additional Release|Any CPU = Additional Release|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F86DDC8-0E2F-4685-80E6-B7DB33F22E4D}.Additional Release|Any CPU.ActiveCfg = Additional Release|Any CPU
+		{6F86DDC8-0E2F-4685-80E6-B7DB33F22E4D}.Additional Release|Any CPU.Build.0 = Additional Release|Any CPU
+		{6F86DDC8-0E2F-4685-80E6-B7DB33F22E4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F86DDC8-0E2F-4685-80E6-B7DB33F22E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F86DDC8-0E2F-4685-80E6-B7DB33F22E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F86DDC8-0E2F-4685-80E6-B7DB33F22E4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Argumentative">
+</Property><Property Name="Solution File" Value="C:\Program Files\Argumentative\Source\Argumentative.sln">
+</Property><Property Name="Date" Value="Monday, 21 June 2010">
+</Property><Property Name="Time" Value="9:54:35 AM">
+</Property></Properties><Event ErrorLevel="0" Project="Argumentative" Source="Argumentative.csproj" Description="Project file successfully backed up as C:\Program Files\Argumentative\Source\Backup\Argumentative.csproj">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="About.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\About.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="Araucaria.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\Araucaria.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="ArgMapInterface.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\ArgMapInterface.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="Argument.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\Argument.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="AssemblyInfo.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="Command.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\Command.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="CutAndPaste.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\CutAndPaste.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="DrawElement.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\DrawElement.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="DrawTree.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\DrawTree.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="Edge.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\Edge.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="Element.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\Element.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="FormFind.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\FormFind.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="FormFullStops.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\FormFullStops.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="FormProperties.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\FormProperties.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="I18N.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\I18N.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="MainForm.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\MainForm.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="MainForm.Designer.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\MainForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="Node.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\Node.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="Options.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\Options.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="PowerPointExport.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\PowerPointExport.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="prefs.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\prefs.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="PrintDialogWithOptions.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\PrintDialogWithOptions.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="PrintDialogWithOptions.Designer.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\PrintDialogWithOptions.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="PrintTree.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\PrintTree.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="Rationale.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\Rationale.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="rtf.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\rtf.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="tests\TestArgument.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\tests\TestArgument.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="tests\TestI18N.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\tests\TestI18N.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="tests\TestNode.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\tests\TestNode.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="tests\TestPrefs.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\tests\TestPrefs.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="tests\TestTransform.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\tests\TestTransform.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="Tokeniser.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\Tokeniser.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="transform.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\transform.cs">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="TransformDlg.cs" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\TransformDlg.cs">
+</Event><Event ErrorLevel="2" Project="Argumentative" Source="Examples\Exposition.xslt" Description="Failed to backup file as C:\Program Files\Argumentative\Source\Backup\Examples\Exposition.xslt">
+</Event><Event ErrorLevel="2" Project="Argumentative" Source="Examples\Planting a haycorn will grow an oak tree.axl" Description="Failed to backup file as C:\Program Files\Argumentative\Source\Backup\Examples\Planting a haycorn will grow an oak tree.axl">
+</Event><Event ErrorLevel="2" Project="Argumentative" Source="Examples\RTF Export.xslt" Description="Failed to backup file as C:\Program Files\Argumentative\Source\Backup\Examples\RTF Export.xslt">
+</Event><Event ErrorLevel="2" Project="Argumentative" Source="Examples\RTF with picture.xslt" Description="Failed to backup file as C:\Program Files\Argumentative\Source\Backup\Examples\RTF with picture.xslt">
+</Event><Event ErrorLevel="2" Project="Argumentative" Source="Examples\svg.xslt" Description="Failed to backup file as C:\Program Files\Argumentative\Source\Backup\Examples\svg.xslt">
+</Event><Event ErrorLevel="2" Project="Argumentative" Source="Examples\web page with image.xslt" Description="Failed to backup file as C:\Program Files\Argumentative\Source\Backup\Examples\web page with image.xslt">
+</Event><Event ErrorLevel="2" Project="Argumentative" Source="Examples\XML Only.xslt" Description="Failed to backup file as C:\Program Files\Argumentative\Source\Backup\Examples\XML Only.xslt">
+</Event><Event ErrorLevel="2" Project="Argumentative" Source="Examples\zeno.axl" Description="Failed to backup file as C:\Program Files\Argumentative\Source\Backup\Examples\zeno.axl">
+</Event><Event ErrorLevel="2" Project="Argumentative" Source="readme.txt" Description="Failed to backup file as C:\Program Files\Argumentative\Source\Backup\readme.txt">
+</Event><Event ErrorLevel="2" Project="Argumentative" Source="Examples\boxy web.xslt" Description="Failed to backup file as C:\Program Files\Argumentative\Source\Backup\Examples\boxy web.xslt">
+</Event><Event ErrorLevel="2" Project="Argumentative" Source="Examples\essay.xslt" Description="Failed to backup file as C:\Program Files\Argumentative\Source\Backup\Examples\essay.xslt">
+</Event><Event ErrorLevel="2" Project="Argumentative" Source="Examples\text.xslt" Description="Failed to backup file as C:\Program Files\Argumentative\Source\Backup\Examples\text.xslt">
+</Event><Event ErrorLevel="2" Project="Argumentative" Source="Examples\toFreemind.xslt" Description="Failed to backup file as C:\Program Files\Argumentative\Source\Backup\Examples\toFreemind.xslt">
+</Event><Event ErrorLevel="2" Project="Argumentative" Source="Examples\web page.xslt" Description="Failed to backup file as C:\Program Files\Argumentative\Source\Backup\Examples\web page.xslt">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="About.resx" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\About.resx">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="FormFind.resx" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\FormFind.resx">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="FormFullStops.resx" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\FormFullStops.resx">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="FormProperties.resx" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\FormProperties.resx">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="MainForm.resx" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\MainForm.resx">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="Options.resx" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\Options.resx">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="PrintDialogWithOptions.resx" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\PrintDialogWithOptions.resx">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="Resource-en-AU.resx" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\Resource-en-AU.resx">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="Resource.resx" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\Resource.resx">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="TransformDlg.resx" Description="File successfully backed up as C:\Program Files\Argumentative\Source\Backup\TransformDlg.resx">
+</Event><Event ErrorLevel="1" Project="Argumentative" Source="Argumentative.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="Argumentative.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Argumentative" Source="Argumentative.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Argumentative" Source="Argumentative.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
