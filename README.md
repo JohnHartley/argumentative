@@ -9,3 +9,10 @@ Features
 * Export to RTF, Word and PowerPoint and web formats
 * Create your own export
 * Represent yourself clearly
+
+Currently requres .Net 2 
+
+To Do
+[ ] Compile for .Net 4.5
+[ ] Test on Windows 10
+[ ] Add release to GitHub
