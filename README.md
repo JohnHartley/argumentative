@@ -12,7 +12,8 @@ Features
 
 Currently requres .Net 2 
 
-To Do
-[ ] Compile for .Net 4.5
-[ ] Test on Windows 10
-[ ] Add release to GitHub
+To do
+
+- [ ] Compile for .Net 4.5
+- [ ] Test on Windows 10
+- [ ] Add release to GitHub
