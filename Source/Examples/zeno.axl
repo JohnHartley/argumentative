@@ -1,0 +1,56 @@
+<argument>
+<premise>
+<title>Motion is possible.</title>
+<objection>
+<title>Motion is impossible whether space is continuous or discrete.</title>
+<helper>
+<title>Either space is continuous, or space is discrete.</title>
+</helper>
+<reason>
+<title>If space is discrete, motion is impossible.</title>
+<reason>
+<title>Zeno's paradoxes of motion for discrete space. [Not filled in here.]</title>
+</reason>
+</reason>
+<reason>
+<title>If space is continuous, motion is impossible.</title>
+<reason>
+<title>A 'faster' object can never catch up with a 'slower' one.</title>
+<helper>
+<title>IF a 'faster' object cannot catch up with a 'slower' one THEN motion is impossible.</title>
+</helper>
+<reason>
+<title>Zeno's paradox of relative motion for continuous space. [Not filled in here.]</title>
+</reason>
+</reason>
+<reason>
+<title>Motion over a finite distance in a finite time is impossible.</title>
+<helper>
+<title>IF motion over a finite distance in a finite time is impossible THEN motion is impossible.</title>
+</helper>
+<reason>
+<title>Motion over a finite distance in a finite time requires making an infinite number of partial motions in a finite time.</title>
+<helper>
+<title>Making an infinite number of partial motions in a finite time is impossible.</title>
+<reason>
+<title>To make an infinite number of partial motions will take an infinite amount of time.</title>
+<helper>
+<title>Making a partial motion takes a finite amount of time.</title>
+</helper>
+<helper>
+<title>It is impossible to take an infinite amount of time in a finite amount of time.</title>
+</helper>
+</reason>
+</helper>
+<reason>
+<title>A finite distance of continuous space can be divided into an infinite number of parts.</title>
+<helper>
+<title>Motion over a finite distance is motion over all of the parts of that distance.</title>
+</helper>
+</reason>
+</reason>
+</reason>
+</reason>
+</objection>
+</premise>
+</argument>

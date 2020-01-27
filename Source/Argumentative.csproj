@@ -15,7 +15,7 @@
     <SignAssembly>False</SignAssembly>
     <DelaySign>False</DelaySign>
     <DocumentationFile>bin\Debug\doc\Argumentative.xml</DocumentationFile>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
@@ -36,6 +36,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <NoStdLib>false</NoStdLib>
@@ -97,21 +98,31 @@
     <StartArguments>G:\dev\Argument\OPENSO~1.AXL</StartArguments>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Office.Interop.PowerPoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.PowerPoint" />
     <Reference Include="NetSpell.SpellChecker">
-      <HintPath>..\NetSpell.SpellChecker.dll</HintPath>
+      <HintPath>NetSpell.SpellChecker.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>..\nunit.framework.dll</HintPath>
+      <HintPath>..\..\..\SharpDevelop5.2.1\bin\Tools\NUnit\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="office" />
     <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.cs">
@@ -197,6 +208,7 @@
     </EmbeddedResource>
     <Content Include="Examples\boxy web.xslt" />
     <Content Include="Examples\essay.xslt" />
+    <None Include="app.config" />
     <None Include="Examples\Exposition.xslt" />
     <None Include="Examples\Planting a haycorn will grow an oak tree.axl" />
     <Content Include="Examples\text.xslt" />

@@ -1,0 +1,47 @@
+<argument>
+<author>Emma Hartley</author>
+<created>2007-5-15</created>
+<modified>2010-6-21</modified>
+<premise>
+<title>Cats are better than dogs II</title>
+<reason>
+<title>They purr</title>
+<helper>
+<title>Purring is quieter than barking</title>
+</helper>
+</reason>
+<objection>
+<title>Dogs can track people</title>
+<helper>
+<title>It is good to find people who are lost</title>
+</helper>
+</objection>
+<objection>
+<title>Cats hurt native animals</title>
+<helper>
+<title>More than dogs do</title>
+</helper>
+</objection>
+<objection>
+<title>Cats do not sleep where they are supposed to</title>
+<objection>
+<title>But so do dogs sometimes</title>
+</objection>
+</objection>
+<reason>
+<title>They are warm</title>
+<helper>
+<title>On your lap</title>
+</helper>
+</reason>
+<reason>
+<title> Cats do not require as much attention</title>
+</reason>
+<reason>
+<title>Dogs are mean</title>
+<helper>
+<title>They chase cats</title>
+</helper>
+</reason>
+</premise>
+</argument>

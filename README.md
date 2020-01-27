@@ -10,10 +10,10 @@ Features
 * Create your own export
 * Represent yourself clearly
 
-Currently requres .Net 2 
+Currently requres .Net 4.5.2
 
 To do
 
-- [ ] Compile for .Net 4.5
-- [ ] Test on Windows 10
-- [ ] Add release to GitHub
+- [x] Compile for .Net 4.5
+- [x] Test on Windows 10
+- [x] Add release to GitHub

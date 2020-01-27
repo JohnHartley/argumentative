@@ -1,0 +1,55 @@
+<argument>
+<author>John Hartley</author>
+<modified>2008-9-16</modified>
+<premise>
+<title>Planting a haycorn will grow a oak tree</title>
+<comment>From "House at Pooh Corner" by A.A.Milne.
+...
+"What are you doing?"
+        "I'm planting a haycorn, Pooh, so that it can  grow  up
+into  an  oak-tree,  and have lots of haycorns just outside the
+front door instead of having to walk miles and  miles,  do  you
+see, Pooh?"
+        "Supposing it doesn't?" said Pooh.
+        "It  will,  because  Christopher Robin says it will, so
+that's why I'm planting it."
+
+        "Well," said Pooh, "if I plant a honeycomb  outside  my
+house, then it will grow up into a beehive."
+        Piglet wasn't quite sure about this.
+        "Or  a  piece of a honeycomb," said Pooh, "so as not to
+waste too much. Only then  I  might  only  get  a  piece  of  a
+beehive,  and  it might be the wrong piece, where the bees were
+buzzing and not hunnying. Bother."
+...</comment>
+<helper>
+<title>So Piglet can have lots of haycorns just outside the front door instead of having to walk miles and miles</title>
+</helper>
+<objection>
+<title>Supposing it doesn't?</title>
+<comment>Said Pooh.  More of a declaration of an objection than a reason for one.</comment>
+<reason>
+<title>if I plant a honeycomb outside my house, then it will grow up into a beehive</title>
+</reason>
+<reason>
+<title>Or a piece of a honeycomb</title>
+<helper>
+<title>so as not to waste too much</title>
+</helper>
+<objection>
+<title>then I might only get a piece of a beehive</title>
+<reason>
+<title>it might be the wrong piece</title>
+<helper>
+<title>Where the bees were buzzing and not hunnying. Bother</title>
+</helper>
+</reason>
+</objection>
+</reason>
+</objection>
+<reason>
+<title>Christopher Robin says it will</title>
+<comment>Expert - at least in the 100 Acre Wood.</comment>
+</reason>
+</premise>
+</argument>

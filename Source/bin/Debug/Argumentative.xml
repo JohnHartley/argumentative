@@ -1,0 +1,2176 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Argumentative</name>
+    </assembly>
+    <members>
+        <member name="T:Argumentative.About">
+            <summary>
+            Standard version information windows form
+            </summary>
+        </member>
+        <member name="F:Argumentative.About.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Argumentative.About.#ctor(System.String)">
+            <summary>About Dialog box. Shows version and licensing information.</summary>
+            <param name="version">Version number. e.g. "0.6.5"</param>
+        </member>
+        <member name="M:Argumentative.About.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Argumentative.About.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Argumentative.Araucaria">
+            <summary>
+            Reads in Araucaria files and schemas
+            </summary>
+        </member>
+        <member name="M:Argumentative.Araucaria.#ctor">
+            <summary>
+            New Araucaria object
+            </summary>
+        </member>
+        <member name="M:Argumentative.Araucaria.load(System.String)">
+            <summary>
+            Loads the Araucaria XML format file
+            </summary>
+            <param name="fileName">File name to Araucaria file to load</param>
+        </member>
+        <member name="M:Argumentative.Araucaria.getAnyTag(System.String,System.Xml.XmlNode)">
+            <summary>
+            Gets the value of a sub element in the list of DOM nodes
+            </summary>
+            <param name="name">The XML element name to search for (any case).</param>
+            <param name="xn">DOM (XML)node</param>
+            <returns>Text in the node</returns>
+        </member>
+        <member name="P:Argumentative.Araucaria.A">
+            <summary>Sets the Arg map</summary>
+        </member>
+        <member name="T:Argumentative.SchemeSet">
+            <summary>
+            Represents a Araucaria schemeset.  This is a series of standard arguments
+            </summary>
+        </member>
+        <member name="M:Argumentative.SchemeSet.#ctor">
+            <summary>
+            New Scheme set
+            </summary>
+        </member>
+        <member name="P:Argumentative.SchemeSet.Schemes">
+            <summary>Get list of schemes</summary>
+        </member>
+        <member name="T:Argumentative.Scheme">
+            <summary>
+            Represents an individual scheme in an Araucaria Scheme set.
+            </summary>
+        </member>
+        <member name="M:Argumentative.Scheme.#ctor">
+            <summary>
+            Creates a new scheme including critical question list.
+            </summary>
+        </member>
+        <member name="M:Argumentative.Scheme.addCriticalQuestion(System.String)">
+            <summary>
+            Adds a critical question to the list.
+            </summary>
+            <param name="question">Question</param>
+        </member>
+        <member name="P:Argumentative.Scheme.Name">
+            <summary>Gets or sets a scheme name</summary>
+        </member>
+        <member name="P:Argumentative.Scheme.Form">
+            <summary>Gets or sets a scheme form</summary>
+        </member>
+        <member name="T:Argumentative.ArgMapInterface">
+            <summary>
+            Interface object to handle interactions between the GUI and the Argument objects.
+            </summary>
+        </member>
+        <member name="F:Argumentative.ArgMapInterface.currentfilename">
+            <summary>Current file name.</summary>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.#ctor(System.Boolean,System.Windows.Forms.TreeView,System.Windows.Forms.RichTextBox)">
+            <summary>
+            Argument Map Interface object with a sample map.
+            </summary>
+            <param name="addSample"></param>
+            <param name="theTV"></param>
+            <param name="editArea"></param>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.exportCurrentNode">
+            <summary>
+            Saves the currently selected node as an argument. The selected node is saves as a Main Premise.
+            </summary>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.loadAXLorRE3(System.String)">
+            <summary>
+            Loads an argument in any of the known formats.
+            </summary>
+            <param name="filename"></param>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.askToSave">
+            <summary>
+            Ask if an argument needs to be saved, if it has been modified.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.openArgument">
+            <summary>
+            Open an argument file with a standard open file dialog box.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.addFileToRecentList(System.String,System.Windows.Forms.ToolStripMenuItem,System.Int32)">
+            <summary>
+            Adds a file name to the recently open files menu item.
+            </summary>
+            <param name="fileName">File name to add.</param>
+            <param name="recentMenuItem">The menu item of the list</param>
+            <param name="maxItems">Maximum number of items allowed to be in the list.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.exportWord">
+            <summary>
+            Export the current argument map to Microsoft Word
+            </summary>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.exportPowerPoint">
+            <summary>
+            Export to Microsoft Power Point using COM/Interop
+            </summary>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.setStandardOptions(Argumentative.Options.OptionsData,Argumentative.DrawTree.joinType,Argumentative.DrawTree.arrowType,Argumentative.DrawTree.notationType,Argumentative.DrawTree.treeOrientationType,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Used to set the options in Quick Views
+            </summary>
+            <param name="options">The options object</param>
+            <param name="join">Join</param>
+            <param name="arrow">Arrow</param>
+            <param name="notation">Box or R notation</param>
+            <param name="orientation">Orientation</param>
+            <param name="shading">Shading and drop shadow</param>
+            <param name="distributed">Distributed line drawing</param>
+            <param name="blackAndWhite">Set colours to black and white</param>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.canChangeNode(Argumentative.Node.ArgumentNodeType)">
+            <summary>
+            Can the current node be changed to the specified node type?
+            </summary>
+            <param name="newNodeType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.canChangeNodeReason(Argumentative.Node.ArgumentNodeType)">
+            <summary>
+            
+            </summary>
+            <param name="newNodeType"></param>
+            <returns>null if node can be changed</returns>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.changeNodeto(Argumentative.Node.ArgumentNodeType)">
+            <summary>
+            Change current node type
+            </summary>
+            <param name="newNodeType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.addPeerNodeToTree(System.Windows.Forms.TreeNode)">
+            <summary>
+            Adds a node at the same level or as a child of the premise
+            </summary>
+            <param name="tn"></param>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.addNodeToTree(Argumentative.Node.ArgumentNodeType,System.String)">
+            <summary>
+            Add a node to the node selected in the tree
+            </summary>
+            <param name="nodeType">Type of node (reason, objection or helper</param>
+            <param name="text">Text for the node</param>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.verifyTree(System.Boolean)">
+            <summary>
+            Verifies the argument tree against the TreeView using assert().
+            </summary>
+            <param name="repair">Attempt to repair the tree</param>
+            <returns>null</returns>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.editBoxChange(System.Windows.Forms.RichTextBox)">
+            <summary>
+            Removes any trailing returns from the RichTextBox
+            </summary>
+            <param name="richTextBox1">true if a return found.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.deleteNodeFromTree">
+            <summary>
+            Delete the currently selected node and its children  in the TreeView.
+            Deletes the corresponding Nodes from the Argument.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.updateEditorText(System.Windows.Forms.RichTextBox)">
+            <summary>
+            update the text editor box with the node text
+            </summary>
+            <param name="tb">RichTextBox to update.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.moveNodeUpDown(Argumentative.ArgMapInterface.direction)">
+            <summary>
+            Move the current TreeView node up or down.
+            </summary>
+            <param name="d">Direction, up or down</param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.moveNodeLeft">
+            <summary>
+            Moves the currently selected node to the left
+            </summary>
+            <returns>True if able to move Node to the left</returns>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.moveNodeRight">
+            <summary>
+            Moves currently selected node to be a child of the node above it in the TreeView
+            </summary>
+            <returns>True if able to move Node to the right</returns>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.swapText(System.Windows.Forms.TreeNode)">
+            <summary>
+            Swaps the text in the currently selected node for its parent's text. Node type is not changed.
+            </summary>
+            <param name="tn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.setImageIndex(System.Windows.Forms.TreeNode,Argumentative.Node)">
+            <summary>
+            Sets the image index of the
+            </summary>
+            <param name="tn"></param>
+            <param name="n"></param>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.loadTree">
+            <summary>
+            Loads an argument into a TreeView
+            </summary>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.relinkArgument(System.Windows.Forms.TreeNode)">
+            <summary>
+            Imposes the TreeView structure on the Argument structure.
+            </summary>
+            <remarks>The TreeNode needs to have the correct Node against it.</remarks>
+            <param name="tn"></param>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.getNodeAt(System.Drawing.Point)">
+            <summary>
+            returns Node at the position p
+            </summary>
+            <param name="p">Point on the graphical view to search</param>
+            <returns>The Node at point p. null if nothing found</returns>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.isModified">
+            <summary>Is the current argument modified</summary>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.Modified">
+            <summary>Call when argument is modified</summary>
+        </member>
+        <member name="M:Argumentative.ArgMapInterface.getTreeView">
+            <summary>Returns the TreeView for the argument</summary>
+        </member>
+        <member name="P:Argumentative.ArgMapInterface.CurrentFilename">
+            <summary>Current file name.</summary>
+        </member>
+        <member name="P:Argumentative.ArgMapInterface.CurrentArg">
+            <summary>Return the Argument belonging to this interface object</summary>
+        </member>
+        <member name="P:Argumentative.ArgMapInterface.Pd">
+            <summary>Gets or sets the Print Document</summary>
+        </member>
+        <member name="T:Argumentative.ArgMapInterface.direction">
+            <summary>Direction to move node in the tree view</summary>
+        </member>
+        <member name="F:Argumentative.ArgMapInterface.direction.up">
+            <summary>Move node up in the current list of siblings</summary>
+        </member>
+        <member name="F:Argumentative.ArgMapInterface.direction.down">
+            <summary>Move node down in the current list of siblings</summary>
+        </member>
+        <member name="F:Argumentative.ArgMapInterface.direction.left">
+            <summary>Move node left (promote)</summary>
+        </member>
+        <member name="F:Argumentative.ArgMapInterface.direction.right">
+            <summary>Move node right (demote)</summary>
+        </member>
+        <member name="T:Argumentative.Argument">
+            <summary>
+            The main argument object.
+            </summary>
+        </member>
+        <member name="F:Argumentative.Argument.UndefinedFile">
+            <summary>The string used for an undefined file</summary>
+        </member>
+        <member name="M:Argumentative.Argument.#ctor">
+            <summary>
+            Argument constructor
+            </summary>
+        </member>
+        <member name="M:Argumentative.Argument.openRE3(System.String)">
+            <summary>
+            Reads a Reasonable! file
+            </summary>
+            <param name="fileName">File to read. Usually ends in re3</param>
+            <returns>True if file read successfuly</returns>
+        </member>
+        <member name="M:Argumentative.Argument.writeArgumentXML(System.String,Argumentative.Node,System.Boolean)">
+            <summary>
+            Writes the XML for an argument to a file.
+            </summary>
+            <param name="fileName">File name</param>
+            <param name="n">Argument Node</param>
+            <param name="makePremise">True sets the XML representation of the top node to type of Premise.</param>
+        </member>
+        <member name="M:Argumentative.Argument.writeArgumentXMLstring(Argumentative.Node,System.Boolean)">
+            <summary>
+            Returns the XML representation of an argument.
+            </summary>
+            <param name="n">Argument Node</param>
+            <param name="addTags">Add tags used in XSL Transforms</param>
+            <returns>The String XML representation of the Node n and its children.</returns>
+        </member>
+        <member name="M:Argumentative.Argument.writeArgumentXML(System.IO.TextWriter,Argumentative.Node,System.Boolean,System.Boolean)">
+            <summary>
+            Writes the argument to a TextWriter file.
+            </summary>
+            <param name="file">TextWriter file</param>
+            <param name="n">Top Argument Node</param>
+            <param name="addTags">Add tags used in XSL Transforms</param>
+            <param name="makePremise"></param>
+        </member>
+        <member name="M:Argumentative.Argument.getAnyTag(System.String,System.Xml.XmlNode)">
+            <summary>
+            Gets the value of a sub element in the list of DOM nodes
+            </summary>
+            <param name="name">The XML element name to search for (any case).</param>
+            <param name="xn">DOM (XML)node</param>
+            <returns>Text in the node</returns>
+        </member>
+        <member name="M:Argumentative.Argument.loadXmlArg(System.String)">
+            <summary>Load argument from a file</summary>
+        </member>
+        <member name="M:Argumentative.Argument.loadXmlArgString(System.String)">
+            <summary>Load argument from a string</summary>
+        </member>
+        <member name="M:Argumentative.Argument.loadXmlArg(System.IO.TextReader)">
+            <summary>Loads the AXL formatted argument. The source may be a file or StringReader</summary>
+        </member>
+        <member name="F:Argumentative.Argument.saveFilter">
+            <summary>Filter for saveFileDialog.Filter field with the supported file types.</summary>
+        </member>
+        <member name="M:Argumentative.Argument.saveAs(System.String,System.Int32)">
+            <summary>Save argument in format depanding on file extension or id number</summary>
+            <param name="fileName">File name with extension</param>
+            <param name="FilterIndex"></param>
+        </member>
+        <member name="M:Argumentative.Argument.saveArg(System.String,Argumentative.Node,System.Boolean)">
+            <summary>
+            Save argument or argument fragment as a file
+            </summary>
+            <param name="fileName">File Name</param>
+            <param name="n">Argument Node</param>
+            <param name="makePremise">Save n as a main premise</param>
+        </member>
+        <member name="M:Argumentative.Argument.findHead">
+            <summary>
+            Returns the top node of the argument
+            </summary>
+            <returns>Head Node</returns>
+        </member>
+        <member name="M:Argumentative.Argument.referenceTree">
+            <summary>
+            references the nodes in the argument 1, 1.1,1.2.1 etc
+            </summary>
+        </member>
+        <member name="M:Argumentative.Argument.findByReference(System.String)">
+            <summary>
+            Finds a Node by its reference e.g. 1.2.1
+            </summary>
+            <param name="reference">Dotted reference string</param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.Argument.findByReference(Argumentative.Node,System.String)">
+            <summary>
+            Finds a Node by its reference e.g. 1.2.1
+            </summary>
+            <param name="startNode">Node to start search</param>
+            <param name="reference">Dotted reference string</param>
+            <returns>null if not found</returns>
+        </member>
+        <member name="M:Argumentative.Argument.addNode(Argumentative.Node.ArgumentNodeType,System.String,Argumentative.Node)">
+            <summary>
+            Adds a Node (element) to the argument
+            </summary>
+            <param name="argType">Node type</param>
+            <param name="text">Element text</param>
+            <param name="parent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.Argument.setupSample">
+            <summary>
+            Creates a sample argument map with a premise, a reason with helper and a objection with helper.
+            </summary>
+            <returns>Head Node of new argument</returns>
+        </member>
+        <member name="M:Argumentative.Argument.getDepth">
+            <summary>
+            Get the depth of the argument from the root node
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.Argument.getDepth(Argumentative.Node)">
+            <summary>
+            Get the depth of the argument from the specified node.
+            </summary>
+            <param name="n">null retrieves the depth of the entire argument</param>
+            <returns>Number of levels including the main premise</returns>
+        </member>
+        <member name="M:Argumentative.Argument.wordCount(Argumentative.Node)">
+            <summary>
+            Counts the number of words in a node and its kids.
+            </summary>
+            <param name="n">Starting Node</param>
+            <returns>Number of words</returns>
+        </member>
+        <member name="M:Argumentative.Argument.nodeCount(Argumentative.Node)">
+            <summary>
+            Counts the number of nodes of all types.
+            </summary>
+            <param name="n">Starting node</param>
+            <returns>Number of children + 1</returns>
+        </member>
+        <member name="M:Argumentative.Argument.Equals(Argumentative.Argument)">
+            <summary>
+            Is the given argument the same as this argument?
+            </summary>
+            <remarks>Used for testing</remarks>
+            <param name="arg">Argument to compare</param>
+            <returns>True if all nodes are equal.</returns>
+        </member>
+        <member name="M:Argumentative.Argument.setArg(Argumentative.Node)">
+            <summary>Replace primary argument</summary>
+            <param name="n">New argument premise node</param>
+        </member>
+        <member name="P:Argumentative.Argument.FileName">
+            <summary>Sets the current file name</summary>
+        </member>
+        <member name="P:Argumentative.Argument.Author">
+            <summary>Get or set the author name.</summary>
+        </member>
+        <member name="P:Argumentative.Argument.CreationDate">
+            <summary>Get the creation date</summary>
+        </member>
+        <member name="P:Argumentative.Argument.CreationDateDefined">
+            <summary>Is the creation date defined</summary>
+        </member>
+        <member name="P:Argumentative.Argument.Title">
+            <summary></summary>
+        </member>
+        <member name="P:Argumentative.Argument.ModifiedCount">
+            <summary>
+            Return the number of times the argument has been modified
+            </summary>
+        </member>
+        <member name="T:Argumentative.Argument.fileIndex">
+            <summary>Enumeration of file types that an argument may be saved / exported in.
+            This correlates with the saveFilter string above
+            </summary>
+        </member>
+        <member name="F:Argumentative.Argument.fileIndex.axl">
+            <summary>Native Argumentative XML format</summary>
+        </member>
+        <member name="F:Argumentative.Argument.fileIndex.bmp">
+            <summary>Windows bitmap</summary>
+        </member>
+        <member name="F:Argumentative.Argument.fileIndex.png">
+            <summary>Portable Network Graphics</summary>
+        </member>
+        <member name="F:Argumentative.Argument.fileIndex.jpg">
+            <summary>JPEG graphic</summary>
+        </member>
+        <member name="F:Argumentative.Argument.fileIndex.gif">
+            <summary>GIF graphic</summary>
+        </member>
+        <member name="F:Argumentative.Argument.fileIndex.rtn">
+            <summary>Rationale argument map format</summary>
+        </member>
+        <member name="T:Argumentative.Icommand">
+            <summary>
+            Interface for Undo function.  This is a far from a complete implementation.
+            </summary>
+        </member>
+        <member name="M:Argumentative.Icommand.execute">
+            <summary>Executes undoable action</summary>
+            <returns>true if successful</returns>
+        </member>
+        <member name="M:Argumentative.Icommand.undo">
+            <summary>Undo this action</summary>
+        </member>
+        <member name="M:Argumentative.Icommand.getName">
+            <summary>Returns the name of this action</summary>
+        </member>
+        <member name="T:Argumentative.Command">
+            <summary>
+            Implements a command pattern for undo
+            </summary>
+        </member>
+        <member name="M:Argumentative.Command.#ctor">
+            <summary>Constructs the command list</summary>
+        </member>
+        <member name="M:Argumentative.Command.loadCommand(Argumentative.Icommand)">
+            <summary>
+            Load a Command object into the undo list
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.Command.executeCommand(System.Int32,System.Object,System.Object)">
+            <summary>
+            Execute a command in the undo sequence. Used for Redo
+            </summary>
+            <param name="slot">Which command</param>
+            <param name="arg1">First argument to be passed</param>
+            <param name="arg2">Second argument to be passed</param>
+        </member>
+        <member name="M:Argumentative.Command.executeCommand(Argumentative.Icommand)">
+            <summary>
+            Executes command and adds it to the undo queue.
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:Argumentative.Command.executeCommand(System.String)">
+            <summary>
+            Executes a command by name and adds it to the undo queue.
+            </summary>
+            <param name="whichCommand">Name of the command</param>
+        </member>
+        <member name="M:Argumentative.Command.undo">
+            <summary>
+            Undo the last command.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Argumentative.deleteCommand">
+            <summary>
+            Used for undo delete - should be stored in the Command object
+            </summary>
+        </member>
+        <member name="M:Argumentative.deleteCommand.#ctor(Argumentative.ArgMapInterface)">
+            <summary>
+            Delete command constructor
+            </summary>
+            <param name="a"></param>
+        </member>
+        <member name="M:Argumentative.deleteCommand.getName">
+            <summary>
+            Get the command's name
+            </summary>
+            <returns>Commands name</returns>
+        </member>
+        <member name="M:Argumentative.deleteCommand.execute">
+            <summary>Execute a delete command</summary>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.deleteCommand.undo">
+            <summary>Undo a delete command</summary>
+            <returns>Success</returns>
+        </member>
+        <member name="T:Argumentative.treeKeyPressCommand">
+            <summary>Implements a keypress command</summary>
+        </member>
+        <member name="M:Argumentative.treeKeyPressCommand.#ctor(System.Char,System.Windows.Forms.RichTextBox)">
+            <summary>
+            Key press constructor
+            </summary>
+            <param name="c">key pressed</param>
+            <param name="rtb">RichTextBox in which the key was pressed</param>
+        </member>
+        <member name="M:Argumentative.treeKeyPressCommand.execute">
+            <summary>
+            Execute keypress command
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.treeKeyPressCommand.undo">
+            <summary>
+            Keypress undo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.treeKeyPressCommand.getName">
+            <summary>
+            Get name "treeKeyPress"
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Argumentative.CutAndPaste">
+            <summary>
+            Cut and Paste functionality between the Argumentative node structure 
+            and text and image formats.
+            </summary>
+        </member>
+        <member name="M:Argumentative.CutAndPaste.#ctor(System.Windows.Forms.TreeView)">
+            <summary>
+            Constructor 
+            </summary>
+            <param name="theTree">TreeView object to work on.</param>
+        </member>
+        <member name="M:Argumentative.CutAndPaste.pasteFromText(System.String)">
+            <summary>
+            Each line from a text paste action is added under the selected TreeNode
+            </summary>
+            <param name="clipboardtext"></param>
+        </member>
+        <member name="M:Argumentative.CutAndPaste.copySelectedTreeNodeAsText">
+            <summary>Copies the current TreeNode and its children to the clipboard.</summary>
+            <returns>Indented text</returns>
+        </member>
+        <member name="M:Argumentative.CutAndPaste.copyToClipboard(Argumentative.Argument)">
+            <summary>
+            Copies the current node and its children to the clipboard in text and graphic formats
+            </summary>
+            <param name="arg"></param>
+        </member>
+        <member name="M:Argumentative.CutAndPaste.paste">
+            <summary>
+            Paste AXL or text under the current node
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Argumentative.DrawElement">
+            <summary>
+            A representation of a DrawTree element
+            </summary>
+        </member>
+        <member name="M:Argumentative.DrawElement.#ctor(Argumentative.Node)">
+            <summary>
+            Constructs a DrawElement
+            </summary>
+            <param name="n"></param>
+        </member>
+        <member name="T:Argumentative.DrawTree">
+            <summary>
+            The drawing engine for the Graphical View and Argument Map graphics
+            </summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.margin">
+            <summary>The margin around an Argument graphic.</summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.zoom">
+            <summary>Current zoom factor</summary>
+        </member>
+        <member name="M:Argumentative.DrawTree.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+            New drawing object for the argument map
+            </summary>
+            <param name="offsetX">Offset from the left</param>
+            <param name="offsetY">Offset from the top</param>
+            <param name="zoom">Magnification</param>
+        </member>
+        <member name="M:Argumentative.DrawTree.joinNodes(Argumentative.Node,Argumentative.Node,System.Int32,System.Int32)">
+            <summary>
+            Draws lines between boxes
+            </summary>
+            <param name="a">First node (From)</param>
+            <param name="b">Second Node (To)</param>
+            <param name="whichKid">The number of the child node being connected to.</param>
+            <param name="kidCount">Number of kids being connected to from the first node.</param>
+        </member>
+        <member name="M:Argumentative.DrawTree.drawElementMarker(Argumentative.Node,Argumentative.DrawTree.joinType,System.Single,System.Single,System.Drawing.Pen,System.Drawing.Brush)">
+            <summary>
+            Draws the optional Reason or Objection tag in the appropriate spot
+            </summary>
+            <param name="n">Node being designated</param>
+            <param name="join"></param>
+            <param name="x">x-axis location</param>
+            <param name="y">y-axis location</param>
+            <param name="pen">pen to use</param>
+            <param name="brush">Brush to use</param>
+        </member>
+        <member name="M:Argumentative.DrawTree.recalc(Argumentative.Node)">
+            <summary>
+            Recalculate the Node with standard screen resolution.
+            </summary>
+            <param name="n">Node to be recalculated.</param>
+        </member>
+        <member name="M:Argumentative.DrawTree.drawTree(System.Drawing.Graphics,Argumentative.Node)">
+            <summary>
+            Draws the tree from the specified node
+            </summary>
+            <param name="g">The Drawing GDI object</param>
+            <param name="n">Root Node</param>
+        </member>
+        <member name="M:Argumentative.DrawTree.drawTree(System.Windows.Forms.PaintEventArgs,Argumentative.ArgMapInterface)">
+            <summary>
+            Paints the graphical view on a Windows form
+            </summary>
+            <param name="e">Standard PaintEventArgs</param>
+            <param name="a">Full context of the current argument</param>
+        </member>
+        <member name="M:Argumentative.DrawTree.drawTree(System.String,Argumentative.Node,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Save argument as a bitmap to a file
+            </summary>
+            <param name="fn">File name</param>
+            <param name="n">Starting node</param>
+            <param name="format">Format to save with</param>
+        </member>
+        <member name="M:Argumentative.DrawTree.drawTree(Argumentative.Node)">
+            <summary>
+            save as bmp file
+            </summary>
+            <param name="n"></param>
+            <returns>Bitmap of current Node and children</returns>
+        </member>
+        <member name="P:Argumentative.DrawTree.MaxHeight">
+            <summary>Return maximum height of the argument (last drawn)</summary>
+        </member>
+        <member name="P:Argumentative.DrawTree.MaxWidth">
+            <summary>Return maximum width of the argument (last drawn)</summary>
+        </member>
+        <member name="T:Argumentative.DrawTree.justificationType">
+            <summary>Justification of the boxes in the argument</summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.justificationType.jLeft">
+            <summary>Boxes aligned left</summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.justificationType.jCentre">
+            <summary>Boxes centred </summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.justificationType.jRight">
+            <summary>Boxes aligned right</summary>
+        </member>
+        <member name="T:Argumentative.DrawTree.joinType">
+            <summary>How boxes are joined</summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.joinType.direct">
+            <summary>Straight line</summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.joinType.dogleg">
+            <summary>joins at right angles _|</summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.joinType.curve">
+            <summary>Bezier curve joins</summary>
+        </member>
+        <member name="T:Argumentative.DrawTree.arrowType">
+            <summary>Arrow types on joining lines</summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.arrowType.none">
+            <summary>No arrows on joining lines</summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.arrowType.start">
+            <summary>Arrow at the start (originating element)</summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.arrowType.end">
+            <summary>Arrow pointing to destination element.</summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.arrowType.both">
+            <summary>Both ends have an arrow.</summary>
+        </member>
+        <member name="T:Argumentative.DrawTree.markerType">
+            <summary>Visual, non colour dependent element type indicator</summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.markerType.none">
+            <summary>No element marker</summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.markerType.lines">
+            <summary>Element indicated by a line just before the connection</summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.markerType.letters">
+            <summary>The letter starting the element used i.e. P for Premise, R for reason, O for Objection and, H for Helper</summary>
+        </member>
+        <member name="T:Argumentative.DrawTree.treeOrientationType">
+            <summary>Which way around is the argument drawn</summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.treeOrientationType.top_down">
+            <summary>Main premise at the top and the rest of the argument cascading down</summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.treeOrientationType.bottom_up">
+            <summary>The argument cascades into the main premise</summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.treeOrientationType.left_to_right">
+            <summary>Main premise at the left and the rest of the argument to the right</summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.treeOrientationType.right_to_left">
+            <summary>Main premise at the right and the rest of the argument to the left</summary>
+        </member>
+        <member name="T:Argumentative.DrawTree.notationType">
+            <summary>Controls if boxes or R notation is used</summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.notationType.boxes">
+            <summary>Show elements in boxes</summary>
+        </member>
+        <member name="F:Argumentative.DrawTree.notationType.Rnotation">
+            <summary>Show R1,R2.. for reasons,O1,O2... for objections</summary>
+        </member>
+        <member name="T:Argumentative.Edge">
+            <summary>
+            An edge object connects elements in a RE3 file
+            </summary>
+        </member>
+        <member name="T:Argumentative.Element">
+            <summary>
+            Basis for a Node and used mainly in RE3 import
+            </summary>
+        </member>
+        <member name="F:Argumentative.Element.name">
+            <summary>Only used in RE3 import</summary>
+        </member>
+        <member name="F:Argumentative.Element.type">
+            <summary>Token type of element</summary>
+        </member>
+        <member name="M:Argumentative.Element.assertToken(Argumentative.Tokeniser,Argumentative.Tokeniser.TokenType,System.String)">
+            <summary>
+            Expect a particular token in the input stream
+            </summary>
+            <param name="T"></param>
+            <param name="token"></param>
+            <param name="msg"></param>
+        </member>
+        <member name="M:Argumentative.Element.labelExpected(Argumentative.Tokeniser,System.String)">
+            <summary>Expect a label in the input stream</summary>
+            <param name="T"></param>
+            <param name="labelName"></param>
+        </member>
+        <member name="F:Argumentative.Edge.fromNodeName">
+            <summary>Reference of previous node</summary>
+        </member>
+        <member name="F:Argumentative.Edge.toNodeName">
+            <summary>Reference of previous node</summary>
+        </member>
+        <member name="M:Argumentative.Edge.#ctor">
+            <summary>Edge constructor</summary>
+        </member>
+        <member name="M:Argumentative.Edge.parseElement(Argumentative.Tokeniser)">
+            <summary>
+            Passes an edge into the edge object
+            </summary>
+            <param name="T">Tokeniser to use</param>
+            <returns></returns>
+        </member>
+        <member name="T:Argumentative.FormFind">
+            <summary>
+            Dialogue box for the Edit / Find
+            </summary>
+        </member>
+        <member name="F:Argumentative.FormFind.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Argumentative.FormFind.#ctor(System.Windows.Forms.TreeView,Argumentative.FindSpec)">
+            <summary>
+            Search dialog box
+            </summary>
+            <param name="tv">TreeView to search</param>
+            <param name="findSpec">The find specification for repeated searches</param>
+        </member>
+        <member name="M:Argumentative.FormFind.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Argumentative.FormFind.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Argumentative.FindSpec">
+            <summary>
+            Stores search specification between calls to find and find next.
+            </summary>
+        </member>
+        <member name="M:Argumentative.FindSpec.#ctor(System.String,System.Windows.Forms.TreeView,System.Boolean)">
+            <summary>
+            Create new Find (Search) Specification
+            </summary>
+            <param name="search">String to search for</param>
+            <param name="tv">Tree view</param>
+            <param name="ignoreCase">Do not match case</param>
+        </member>
+        <member name="M:Argumentative.FindSpec.CopySpec">
+            <summary>
+            Copy FindSpec object
+            </summary>
+            <returns>Copy of FindSpec object</returns>
+        </member>
+        <member name="M:Argumentative.FindSpec.find(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Find string in current argument
+            </summary>
+            <param name="searchFor">String to search for</param>
+            <param name="ignoreCase">Do not match case</param>
+            <param name="searchComments">Search the comments properties.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.FindSpec.find">
+            <summary>
+            Find using current Search Specification
+            </summary>
+            <returns>True if match</returns>
+        </member>
+        <member name="P:Argumentative.FindSpec.SearchFor">
+            <summary>
+            Retrieves the search string.
+            </summary>
+        </member>
+        <member name="P:Argumentative.FindSpec.IgnoreCase">
+            <summary>
+            Gets or sets the ignore case flag
+            </summary>
+        </member>
+        <member name="P:Argumentative.FindSpec.SearchComments">
+            <summary>
+            Search within comments flag
+            </summary>
+        </member>
+        <member name="T:Argumentative.FormFullStops">
+            <summary>
+            Adds or removes full stops from argument nodes
+            </summary>
+        </member>
+        <member name="F:Argumentative.FormFullStops.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Argumentative.FormFullStops.#ctor(Argumentative.ArgMapInterface)">
+            <summary>
+            A constructor for the FormFullStops dialog box.
+            </summary>
+            <param name="ami"></param>
+        </member>
+        <member name="M:Argumentative.FormFullStops.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Argumentative.FormFullStops.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Argumentative.FormProperties">
+            <summary>
+            Summary description for FormProperties.
+            </summary>
+        </member>
+        <member name="F:Argumentative.FormProperties.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Argumentative.FormProperties.#ctor(System.Windows.Forms.TreeView,Argumentative.ArgMapInterface)">
+            <summary>
+            A form to display and change element and argument properties
+            </summary>
+            <param name="tv">Tree view connected to the argument</param>
+            <param name="ami">Argument interface object</param>
+        </member>
+        <member name="M:Argumentative.FormProperties.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Argumentative.FormProperties.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Argumentative.FormProperties.isActive">
+            <summary>Set when window is open.</summary>
+        </member>
+        <member name="M:Argumentative.FormProperties.changeSelection(System.Windows.Forms.TreeNode)">
+            <summary>
+            Changes the information in the window when the selected node changes
+            </summary>
+            <param name="tn">Selected TreeNode</param>
+        </member>
+        <member name="T:Argumentative.I18N">
+            <summary>
+            Internationalisation Resources
+            </summary>
+        </member>
+        <member name="M:Argumentative.I18N.#ctor">
+            <summary>
+            Internationalisation constructor
+            </summary>
+        </member>
+        <member name="M:Argumentative.I18N.init(System.String)">
+            <summary>
+            Internationalisation singleton creation.
+            </summary>
+            <param name="localeName">Locale name e.g. "en-GB". Empty string will lookup the current locale</param>
+        </member>
+        <member name="M:Argumentative.I18N.getLocale">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.I18N.getString(System.String)">
+            <summary>
+            Get string
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.I18N.getString(System.String,System.String)">
+            <summary>
+            Get international string
+            </summary>
+            <remarks>An interim function to transition to internationalisation</remarks>
+            <param name="name">Resource name</param>
+            <param name="defaultString">Default string if the resource name not found</param>
+            <returns></returns>
+        </member>
+        <member name="P:Argumentative.I18N.getLanguage">
+            <summary>Get two letter ISO language string</summary>
+        </member>
+        <member name="T:Argumentative.MainForm">
+            <summary>
+            The primary application form
+            </summary>
+        </member>
+        <member name="M:Argumentative.MainForm.#ctor(System.String)">
+            <summary>Primary form for the application</summary>
+            <param name="commandline">File to open</param>
+        </member>
+        <member name="M:Argumentative.MainForm.Main(System.String[])">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="F:Argumentative.MainForm.ami">
+            <summary>Main interface object</summary>
+        </member>
+        <member name="M:Argumentative.MainForm.setStatus(System.String)">
+            <summary>Sets the status line at the bottom of the main screen</summary>
+            <param name="text">Text string to display</param>
+        </member>
+        <member name="M:Argumentative.MainForm.getPointInGraphicalView">
+            <summary>
+            Translates a mouse click in the graphical view
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Argumentative.MainForm.components">
+            <summary>
+            Designer variable used to keep track of non-visual components.
+            </summary>
+        </member>
+        <member name="M:Argumentative.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Disposes resources used by the form.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Argumentative.MainForm.InitializeComponent">
+            <summary>
+            This method is required for Windows Forms designer support.
+            Do not change the method contents inside the source code editor. The Forms designer might
+            not be able to load this method if it was changed manually.
+            </summary>
+        </member>
+        <member name="T:Argumentative.Node">
+            <summary>
+            The basic argument element
+            </summary>
+        </member>
+        <member name="F:Argumentative.Node.x">
+            <summary>The x axis graphical location of the upper left of the node</summary>
+        </member>
+        <member name="F:Argumentative.Node.y">
+            <summary>The y axis graphical location of the upper left of the node</summary>
+        </member>
+        <member name="F:Argumentative.Node.width">
+            <summary>Width</summary>
+        </member>
+        <member name="F:Argumentative.Node.height">
+            <summary>height</summary>
+        </member>
+        <member name="F:Argumentative.Node.fullWidth">
+            <summary>Width of this node and its children</summary>
+        </member>
+        <member name="F:Argumentative.Node.fullHeight">
+            <summary>Height of this node and its children</summary>
+        </member>
+        <member name="F:Argumentative.Node.fromNode">
+            <summary>Parent node</summary>
+        </member>
+        <member name="F:Argumentative.Node.nodeType">
+            <summary>Argument element type. Reason, objection, helper</summary>
+        </member>
+        <member name="F:Argumentative.Node.kids">
+            <summary>Child nodes</summary>
+        </member>
+        <member name="M:Argumentative.Node.#ctor">
+            <summary>
+            An argument node
+            </summary>
+        </member>
+        <member name="M:Argumentative.Node.#ctor(System.String)">
+            <summary> Creates a new reason node with specified text</summary>
+            <param name="nodeText">node text</param>
+        </member>
+        <member name="M:Argumentative.Node.#ctor(System.String,Argumentative.Node.ArgumentNodeType,System.String)">
+            <summary>Node with the basics</summary>
+            <param name="nodeText">Text</param>
+            <param name="arg">Type of element</param>
+            <param name="reference">Reference</param>
+        </member>
+        <member name="M:Argumentative.Node.swapNodeText(Argumentative.Node,Argumentative.Node)">
+            <summary>
+            Swaps the text of two nodes
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+        </member>
+        <member name="M:Argumentative.Node.Equals(Argumentative.Node)">
+            <summary>
+            Is the specified node equal to the this node?
+            </summary>
+            <remarks>Used for testing.</remarks>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.Node.addKid(Argumentative.Node)">
+            <summary>
+            Add a child node to the current node. Empty nodes (no editor text) are not added.
+            </summary>
+            <param name="n">Node to add</param>
+        </member>
+        <member name="M:Argumentative.Node.addKid(Argumentative.Node,System.Boolean)">
+            <summary>
+            Add a child node to the current node.
+            </summary>
+            <param name="n">Node to add</param>
+            <param name="allowEmpty">Empty nodes (no editor text) may be added if true</param>
+        </member>
+        <member name="M:Argumentative.Node.ArgumentNodeTypeString">
+            <summary>
+            Returns node type as a string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.Node.countKids">
+            <summary>How many child elements in the Node</summary>
+            <returns>Number of child elements</returns>
+        </member>
+        <member name="M:Argumentative.Node.calcRnotation(Argumentative.Node)">
+            <summary>
+            Calculates the R notation referencing
+            </summary>
+            <param name="n">Starting Node</param>
+        </member>
+        <member name="M:Argumentative.Node.findNodeByReference(System.String,Argumentative.Node)">
+            <summary>
+            Finds a Node by its reference string
+            </summary>
+            <param name="reference">Reference to search for</param>
+            <param name="start">Node to start from</param>
+            <returns>Node found or null if not found</returns>
+        </member>
+        <member name="M:Argumentative.Node.isCoPremise">
+            <summary>
+            Is the Node a Co-premise
+            </summary>
+            <returns></returns>
+            <remarks>All Helpers are Co-premises for the moment</remarks>
+        </member>
+        <member name="M:Argumentative.Node.hasCoPremises(Argumentative.Node)">
+            <summary>
+            Determines if a node has co-premises
+            </summary>
+            <param name="n"></param>
+            <returns>True if node has co-premises</returns>
+        </member>
+        <member name="M:Argumentative.Node.getRef">
+            <summary>Get Reference</summary>
+            <returns>Reference</returns>
+        </member>
+        <member name="M:Argumentative.Node.getRef(System.String)">
+            <summary>
+            Get reference and add string
+            </summary>
+            <param name="add">String to append</param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.Node.setRef(System.String)">
+            <summary>
+            Sets reference
+            </summary>
+            <param name="newRef"></param>
+        </member>
+        <member name="M:Argumentative.Node.getRnotation">
+            <summary>
+            Get R notation.
+            </summary>
+            <returns>Notation string for Node</returns>
+        </member>
+        <member name="M:Argumentative.Node.setComment(System.String)">
+            <summary>Sets comment text</summary>
+            <param name="newText">comment text</param>
+        </member>
+        <member name="M:Argumentative.Node.getComment">
+            <summary>Retrieves comment text</summary>
+            <returns>Comment text</returns>
+        </member>
+        <member name="P:Argumentative.Node.EditorText">
+            <summary>Gets and sets the Node's text content.</summary>
+        </member>
+        <member name="P:Argumentative.Node.Created">
+            <summary>Gets the Date and time the node was created.</summary>
+        </member>
+        <member name="P:Argumentative.Node.Modified">
+            <summary>Gets the Date and time the node was modified.</summary>
+        </member>
+        <member name="P:Argumentative.Node.IsVisible">
+            <summary>Is this is an expanded node?</summary>
+        </member>
+        <member name="T:Argumentative.Node.ArgumentNodeType">
+            <summary>Type of element for a node.</summary>
+        </member>
+        <member name="F:Argumentative.Node.ArgumentNodeType.unknown">
+            <summary>Unknown argument type</summary>
+        </member>
+        <member name="F:Argumentative.Node.ArgumentNodeType.premise">
+            <summary></summary>
+        </member>
+        <member name="F:Argumentative.Node.ArgumentNodeType.reason">
+            <summary>Main Premise. One per argument</summary>
+        </member>
+        <member name="F:Argumentative.Node.ArgumentNodeType.objection">
+            <summary>Objection</summary>
+        </member>
+        <member name="F:Argumentative.Node.ArgumentNodeType.helper">
+            <summary>Helper</summary>
+        </member>
+        <member name="F:Argumentative.Node.ArgumentNodeType.copremise">
+            <summary>Co-premise</summary>
+        </member>
+        <member name="T:Argumentative.Options">
+            <summary>
+            Summary description for Options.
+            </summary>
+        </member>
+        <member name="F:Argumentative.Options.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Argumentative.Options.#ctor(System.Windows.Forms.TreeView)">
+            <summary>
+            Initialise options subsystem
+            </summary>
+            <param name="tv">Associated tree view</param>
+        </member>
+        <member name="M:Argumentative.Options.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Argumentative.Options.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Argumentative.Options.ElementOptions">
+            <summary>Element display properties</summary>
+        </member>
+        <member name="F:Argumentative.Options.ElementOptions.font">
+            <summary>Element font</summary>
+        </member>
+        <member name="F:Argumentative.Options.ElementOptions.fontColour">
+            <summary>Element colour</summary>
+        </member>
+        <member name="F:Argumentative.Options.ElementOptions.boxColour">
+            <summary>Colour of the enclosing box.</summary>
+        </member>
+        <member name="F:Argumentative.Options.ElementOptions.lineWidth">
+            <summary>Line width</summary>
+        </member>
+        <member name="F:Argumentative.Options.ElementOptions.lineStyle">
+            <summary>Line style (dashed dotted etc)</summary>
+        </member>
+        <member name="F:Argumentative.Options.ElementOptions.boxWidth">
+            <summary>Line width of the enclosing box</summary>
+        </member>
+        <member name="F:Argumentative.Options.ElementOptions.fontBrush">
+            <summary>Font Brush - sets colour</summary>
+        </member>
+        <member name="M:Argumentative.Options.ElementOptions.#ctor">
+            <summary>Constructor setting defaults:
+            Font: Arial 8 point
+            Colour: black
+            Lines: Solid, Black, 2point
+            Box Width: 200 pixels
+            </summary>
+        </member>
+        <member name="M:Argumentative.Options.ElementOptions.BoxPen">
+            <summary>Gets Box pen object</summary>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.Options.ElementOptions.#ctor(System.String,System.Int32,System.Drawing.Color,System.Drawing.Color,System.Int32,System.Int32,System.Drawing.Drawing2D.DashStyle)">
+            <summary>
+            Constructor using all properties
+            </summary>
+            <param name="theFont">Font</param>
+            <param name="fontSize">Text size</param>
+            <param name="fontColour">Font Colour</param>
+            <param name="boxColour">Enclosing box colour</param>
+            <param name="lineWidth">Enclosing box line width</param>
+            <param name="boxWidth">Standard box width</param>
+            <param name="lineStyle">Line style of the enclosing box</param>
+        </member>
+        <member name="M:Argumentative.Options.ElementOptions.uglyCopy(Argumentative.Options.ElementOptions)">
+            <summary>
+            Copies the an ElementOptions object
+            </summary>
+            <param name="e">ElementOptions object to copy</param>
+            <returns></returns>
+        </member>
+        <member name="P:Argumentative.Options.ElementOptions.BoxColour">
+            <summary>Gets element graphical containing box colour</summary>
+        </member>
+        <member name="T:Argumentative.Options.OptionsData">
+            <summary>
+            Stores options for features in Argumentative
+            </summary>
+        </member>
+        <member name="F:Argumentative.Options.OptionsData.recentFiles">
+            <summary>maximum number of files in the recent files list</summary>
+        </member>
+        <member name="F:Argumentative.Options.OptionsData.recentFileNames">
+            <summary>Stores the names of the files. Only used for loading</summary>
+        </member>
+        <member name="F:Argumentative.Options.OptionsData.premise">
+            <summary>Display options for the main premise</summary>
+        </member>
+        <member name="F:Argumentative.Options.OptionsData.objection">
+            <summary>Display options for all objections</summary>
+        </member>
+        <member name="F:Argumentative.Options.OptionsData.reason">
+            <summary>Display options for all reasons</summary>
+        </member>
+        <member name="F:Argumentative.Options.OptionsData.helper">
+            <summary>Display options for all helpers</summary>
+        </member>
+        <member name="M:Argumentative.Options.OptionsData.whichOption(Argumentative.Node)">
+            <summary>
+            Retrieve the options belonging to a Node
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.Options.OptionsData.init(System.Windows.Forms.ToolStripMenuItem)">
+            <summary>
+            Initialise the static variable for OptionsData
+            </summary>
+            <param name="recent">Menu to populate with recent files</param>
+        </member>
+        <member name="M:Argumentative.Options.OptionsData.saveOptions(System.Windows.Forms.ToolStripMenuItem,System.String)">
+            <summary>
+            Save the current options
+            </summary>
+            <param name="recent">The menu strip to extract the recent file list from</param>
+            <param name="fileName">Options file name</param>
+        </member>
+        <member name="M:Argumentative.Options.OptionsData.loadGraphicalOnly(System.String)">
+            <summary>
+            Load options relevant to the graphical view
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.Options.OptionsData.loadGraphical(System.String,Argumentative.Prefs)">
+            <summary>Loads the graphical options from a prefs file</summary>
+            <param name="fileName"></param>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.Options.OptionsData.loadOptions(System.Windows.Forms.ToolStripMenuItem)">
+            <summary>
+            Load options from the options XML file format and loads the recent menus.
+            </summary>
+            <param name="recent">The menu object to load recent files into</param>
+        </member>
+        <member name="M:Argumentative.Options.OptionsData.getlastXSL">
+            <summary>
+            Returns the last XSL file used in a transformation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.Options.OptionsData.setlastXSL(System.String)">
+            <summary>
+            Sets the last XSL file used for a transformation
+            </summary>
+            <param name="lastXSL"></param>
+        </member>
+        <member name="M:Argumentative.Options.OptionsData.getlastXSLoutput">
+            <summary>
+            Gets the last output file used for a transformation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.Options.OptionsData.setlastXSLoutput(System.String)">
+            <summary>
+            Sets the last output file used for a transformation.
+            </summary>
+            <param name="lastXSLoutput"></param>
+        </member>
+        <member name="P:Argumentative.Options.OptionsData.Instance">
+            <summary>Returns the options (singleton) object</summary>
+        </member>
+        <member name="P:Argumentative.Options.OptionsData.RecentFiles">
+            <summary>Gets or sets the number of recent files listed</summary>
+        </member>
+        <member name="P:Argumentative.Options.OptionsData.Author">
+            <summary>Gets or sets the current author</summary>
+        </member>
+        <member name="P:Argumentative.Options.OptionsData.ShowGraphicalView">
+            <summary>Get property. True if the Graphical view is visiable</summary>
+        </member>
+        <member name="P:Argumentative.Options.OptionsData.Dictionary">
+            <summary>Gets or sets the dictionary file in use. E.g. en-Au.dic</summary>
+        </member>
+        <member name="P:Argumentative.Options.OptionsData.Justification">
+            <summary>Gets or sets drawing justification</summary>
+        </member>
+        <member name="P:Argumentative.Options.OptionsData.Join">
+            <summary>Gets or sets drawing join type.</summary>
+        </member>
+        <member name="P:Argumentative.Options.OptionsData.TreeOrientation">
+            <summary>Gets or sets drawing orientation.</summary>
+        </member>
+        <member name="P:Argumentative.Options.OptionsData.Notation">
+            <summary>Gets or sets drawing notation type</summary>
+        </member>
+        <member name="P:Argumentative.Options.OptionsData.Arrow">
+            <summary>Gets or sets drawing arrow directions</summary>
+        </member>
+        <member name="P:Argumentative.Options.OptionsData.DropShadow">
+            <summary>Gets or sets drawing box drop shadow.</summary>
+        </member>
+        <member name="P:Argumentative.Options.OptionsData.BoxShading">
+            <summary>Gets or sets drawing graduated shading.</summary>
+        </member>
+        <member name="P:Argumentative.Options.OptionsData.ShowLegend">
+            <summary>Gets or sets drawing legend.  Intended for R notation option</summary>
+        </member>
+        <member name="P:Argumentative.Options.OptionsData.Distributed">
+            <summary>Gets or sets drawing join distribution type.</summary>
+        </member>
+        <member name="P:Argumentative.Options.OptionsData.HelpersAsCoPremises">
+            <summary>Show Helpers at the same level as the owning element.</summary>
+        </member>
+        <member name="P:Argumentative.Options.OptionsData.Marker">
+            <summary>Gets or sets drawing marker type.</summary>
+        </member>
+        <member name="P:Argumentative.Options.OptionsData.TreeFont">
+            <summary>Gets or sets tree view font.</summary>
+        </member>
+        <member name="P:Argumentative.Options.OptionsData.TreeColour">
+            <summary>Gets or sets tree view text colour</summary>
+        </member>
+        <member name="P:Argumentative.Options.OptionsData.XSLfilepath">
+            <summary>Gets path of XSL transformation files.</summary>
+        </member>
+        <member name="T:Argumentative.PowerPointExport">
+            <summary>
+            Summary description for PowerPointExport.
+            </summary>
+        </member>
+        <member name="M:Argumentative.PowerPointExport.outputToPowerPoint(Argumentative.Argument)">
+            <summary>
+            Create the current argument in MS PowerPoint using COM
+            </summary>
+            <param name="a"></param>
+        </member>
+        <member name="T:Argumentative.Prefs">
+            <summary> Implements a preference file and storage </summary>
+        </member>
+        <member name="M:Argumentative.Prefs.#ctor">
+            <summary>Preference constructor</summary>
+        </member>
+        <member name="M:Argumentative.Prefs.prefExists(System.String)">
+            <summary>
+            Does a preference name exist?
+            </summary>
+            <param name="name">Preference name to search for. Case sensitive</param>
+            <returns>true if there is a name match.</returns>
+        </member>
+        <member name="M:Argumentative.Prefs.defPref(System.String,System.String,System.String)">
+            <summary>
+            Define a preference
+            </summary>
+            <param name="name">Preference name</param>
+            <param name="defaultValue"></param>
+            <param name="section"></param>
+        </member>
+        <member name="M:Argumentative.Prefs.setPref(System.String,System.String,System.String)">
+            <summary>Set a general preference. Usually using the .ToString() function</summary>
+            <param name="name"></param>
+            <param name="section"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Argumentative.Prefs.getPref(System.String)">
+            <summary>Returns the value of a string preference</summary>
+            <param name="name">Preference name</param>
+            <returns>The value of the preference. "" if the Preference name not found</returns>
+        </member>
+        <member name="M:Argumentative.Prefs.getInt(System.String,System.Int32,System.Int64)">
+            <summary>
+            Get integer preference with minimum
+            </summary>
+            <param name="name">Preference name</param>
+            <param name="defaultInt"></param>
+            <param name="min"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.Prefs.getInt(System.String,System.Int64)">
+            <summary>
+            Get integer preference
+            </summary>
+            <param name="name">Preference name</param>
+            <param name="defaultInt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.Prefs.getFloat(System.String)">
+            <summary>Retrieve the floating point value of a preference.</summary>
+            <param name="name"></param>
+            <returns>A converted floating point (float) value. 0F if pref name not found.</returns>
+        </member>
+        <member name="M:Argumentative.Prefs.getBool(System.String)">
+            <summary>
+            Get boolean preference
+            </summary>
+            <param name="name">Preference name</param>
+            <returns>true if preference is found and has the valur "True", otherwise false.</returns>
+        </member>
+        <member name="M:Argumentative.Prefs.getEnum(System.String,System.Type,System.Enum)">
+            <summary>
+            Retrieves an Enumeration written to prefs using .ToString()
+            </summary>
+            <param name="name">Unique preference name</param>
+            <param name="en">The enumerator type e.g. typeof(DrawTree.joinType)</param>
+            <param name="defaultValue">Value returned if name not found</param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.Prefs.setColour(System.String,System.String,System.Drawing.Color)">
+            <summary>
+            Sets a colour preference. The RGB value is written in hex.
+            </summary>
+            <param name="name">Preference name.</param>
+            <param name="section"></param>
+            <param name="c"></param>
+        </member>
+        <member name="M:Argumentative.Prefs.getColour(System.String,System.Drawing.Color)">
+            <summary>
+            Get a colour preference.
+            </summary>
+            <param name="name">Preference name.</param>
+            <param name="defaultColour">Colour returned if preference name not found.</param>
+            <returns>Preference colour</returns>
+        </member>
+        <member name="M:Argumentative.Prefs.setFont(System.String,System.String,System.Drawing.Font)">
+            <summary>
+            Set a font as a preference
+            </summary>
+            <param name="name">Preference name.</param>
+            <param name="section">Preference section.</param>
+            <param name="theFont">The font to set.</param>
+        </member>
+        <member name="M:Argumentative.Prefs.getFont(System.String,System.Drawing.Font)">
+            <summary>
+            Get a Font preference
+            </summary>
+            <param name="name">Preference name.</param>
+            <param name="defaultFont">Font returned if preference name not found.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.Prefs.save(System.String,System.String)">
+            <summary>Saves all or selected preferences.</summary>
+            <param name="fileName">Preference File name.  Empty saves to prefs.xml in the application's directory.</param>
+            <param name="section">Empty string saves all sections, otherwise general or graphical</param>
+        </member>
+        <member name="M:Argumentative.Prefs.load(System.String)">
+            <summary>
+            Load preference file
+            </summary>
+            <param name="filename">File name to load</param>
+            <returns>True if successful</returns>
+        </member>
+        <member name="T:Argumentative.PrintDialogWithOptions">
+            <summary>Print dialog.</summary>
+        </member>
+        <member name="F:Argumentative.PrintDialogWithOptions.printGraphics">
+            <summary>True prints the Graphical view. False prints text</summary>
+        </member>
+        <member name="F:Argumentative.PrintDialogWithOptions.allPages">
+            <summary>Print all pages</summary>
+        </member>
+        <member name="F:Argumentative.PrintDialogWithOptions.fromPage">
+            <summary>The first page to be printed</summary>
+        </member>
+        <member name="F:Argumentative.PrintDialogWithOptions.toPage">
+            <summary>The last page to be printed</summary>
+        </member>
+        <member name="F:Argumentative.PrintDialogWithOptions.copies">
+            <summary>Number of copies to print</summary>
+        </member>
+        <member name="F:Argumentative.PrintDialogWithOptions.showPageNumbers">
+            <summary>Draw page numbers at the bottom of the page</summary>
+        </member>
+        <member name="M:Argumentative.PrintDialogWithOptions.#ctor">
+            <summary>
+            Print Dialog box
+            </summary>
+        </member>
+        <member name="F:Argumentative.PrintDialogWithOptions.components">
+            <summary>
+            Designer variable used to keep track of non-visual components.
+            </summary>
+        </member>
+        <member name="M:Argumentative.PrintDialogWithOptions.Dispose(System.Boolean)">
+            <summary>
+            Disposes resources used by the form.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Argumentative.PrintDialogWithOptions.InitializeComponent">
+            <summary>
+            This method is required for Windows Forms designer support.
+            Do not change the method contents inside the source code editor. The Forms designer might
+            not be able to load this method if it was changed manually.
+            </summary>
+        </member>
+        <member name="P:Argumentative.PrintDialogWithOptions.SinglePage">
+            <summary>Retrieve singlr page boolean</summary>
+        </member>
+        <member name="T:Argumentative.PrintTree">
+            <summary>
+            Printing of graphical and textual arguments
+            </summary>
+        </member>
+        <member name="M:Argumentative.PrintTree.#ctor(System.Boolean,Argumentative.ArgMapInterface,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Prints a text view of the current map.
+            </summary>
+            <param name="dummy"></param>
+            <param name="a"></param>
+            <param name="rangeStart"></param>
+            <param name="rangeFinish"></param>
+            <param name="showPageNumber"></param>
+        </member>
+        <member name="M:Argumentative.PrintTree.#ctor(Argumentative.ArgMapInterface,System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Prints the graphical view of the current map
+            </summary>
+            <param name="a"></param>
+            <param name="rangeStart">First page</param>
+            <param name="rangeFinish">Last page</param>
+            <param name="showPageNumber">Displays the word Page and the page number.</param>
+            <param name="scaleToPage">Scale the map to the current page size.</param>
+        </member>
+        <member name="M:Argumentative.PrintTree.release">
+            <summary>
+            Release the print event. ~PrintTree executes only when the application is exiting
+            </summary>
+        </member>
+        <member name="M:Argumentative.PrintTree.print">
+            <summary>
+            Start the printing process
+            </summary>
+        </member>
+        <member name="M:Argumentative.PrintTree.GraphicsPrinting">
+            <summary>Print the graphical view</summary>
+        </member>
+        <member name="T:Argumentative.Rationale">
+            <summary>An object for exporting to and from Rationale</summary>
+        </member>
+        <member name="M:Argumentative.Rationale.exportToRationale(System.String,Argumentative.Node,System.Boolean)">
+            <summary>Exports the current map to Rationale 1.09 file format</summary>
+            <param name="fileName">File name to write. Ends with .rtnl</param>
+            <param name="mainPremise">Main Premise Node</param>
+            <param name="expanded"></param>
+        </member>
+        <member name="M:Argumentative.Rationale.importFromRationale(System.String)">
+            <summary>
+            Import a Rationale file
+            </summary>
+            <param name="fileName">File name including path to import.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.Rationale.getRef(System.String)">
+            <summary>
+            Extracts the array style reference from a line
+            </summary>
+            <param name="line">string read from file</param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.Rationale.addNode(System.String,System.String,Argumentative.Node)">
+            <summary>Add a node to the tree</summary>
+            <param name="newRef">reference of the new node</param>
+            <param name="toRef">the reference of the nofe to add the new node to</param>
+            <param name="n">the node to add</param>
+        </member>
+        <member name="M:Argumentative.Rationale.removeDuplicates(Argumentative.Node)">
+            <summary>Removes duplicates created by the import of compound elements</summary>
+            <param name="n"></param>
+        </member>
+        <member name="T:Argumentative.RTF">
+            <summary>
+            A toolbox for the creation of Rich Text Format files.
+            Code based on Khendys Gordon's article in CodeProject.com, "Insert Plain Text and Images into RichTextBox at Runtime"
+            found at http://www.codeproject.com/KB/edit/csexrichtextbox.aspx
+            </summary>
+        </member>
+        <member name="M:Argumentative.RTF.#ctor">
+            <summary>
+            Rich Text Format (RTF) object. Default font is Arial 12
+            </summary>
+        </member>
+        <member name="F:Argumentative.RTF.textColor">
+            <summary>The default text color</summary>
+        </member>
+        <member name="F:Argumentative.RTF.highlightColor">
+            <summary>The default text background color</summary>
+        </member>
+        <member name="F:Argumentative.RTF.rtfColor">
+            <summary>Dictionary that maps color enums to RTF color codes</summary>
+        </member>
+        <member name="F:Argumentative.RTF.rtfFontFamily">
+            <summary>Dictionary that mapas Framework font families to RTF font families</summary>
+        </member>
+        <member name="M:Argumentative.RTF.InsertImage(System.Drawing.Image)">
+            <summary>
+            Inserts an image into the RichTextBox.  The image is wrapped in a Windows
+            Format Metafile, because although Microsoft discourages the use of a WMF,
+            the RichTextBox (and even MS Word), wraps an image in a WMF before inserting
+            the image into a document.  The WMF is attached in HEX format (a string of
+            HEX numbers).
+            
+            The RTF Specification v1.6 says that you should be able to insert bitmaps,
+            .jpegs, .gifs, .pngs, and Enhanced Metafiles (.emf) directly into an RTF
+            document without the WMF wrapper. This works fine with MS Word,
+            however, when you don't wrap images in a WMF, WordPad and
+            RichTextBoxes simply ignore them.  Both use the riched20.dll or msfted.dll.
+            </summary>
+            <remarks>
+            NOTE: The image is inserted wherever the caret is at the time of the call,
+            and if any text is selected, that text is replaced.
+            </remarks>
+            <param name="_image"></param>
+        </member>
+        <member name="M:Argumentative.RTF.ImageRTF(System.Drawing.Image)">
+            <summary>
+            converts an image to RTF
+            </summary>
+            <remarks> Does not have the header and footer found InsertImage</remarks>
+            <param name="_image"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.RTF.GetImagePrefix(System.Drawing.Image)">
+             <summary>
+             Creates the RTF control string that describes the image being inserted.
+             This description (in this case) specifies that the image is an
+             MM_ANISOTROPIC metafile, meaning that both X and Y axes can be scaled
+             independently.  The control string also gives the images current dimensions,
+             and its target dimensions, so if you want to control the size of the
+             image being inserted, this would be the place to do it. The prefix should
+             have the form ...
+             
+             {\pict\wmetafile8\picw[A]\pich[B]\picwgoal[C]\pichgoal[D]
+             
+             where ...
+             
+             A	= current width of the metafile in hundredths of millimetres (0.01mm)
+            		= Image Width in Inches * Number of (0.01mm) per inch
+            		= (Image Width in Pixels / Graphics Context's Horizontal Resolution) * 2540
+            		= (Image Width in Pixels / Graphics.DpiX) * 2540
+             
+             B	= current height of the metafile in hundredths of millimetres (0.01mm)
+            		= Image Height in Inches * Number of (0.01mm) per inch
+            		= (Image Height in Pixels / Graphics Context's Vertical Resolution) * 2540
+            		= (Image Height in Pixels / Graphics.DpiX) * 2540
+             
+             C	= target width of the metafile in twips
+            		= Image Width in Inches * Number of twips per inch
+            		= (Image Width in Pixels / Graphics Context's Horizontal Resolution) * 1440
+            		= (Image Width in Pixels / Graphics.DpiX) * 1440
+             
+             D	= target height of the metafile in twips
+            		= Image Height in Inches * Number of twips per inch
+            		= (Image Height in Pixels / Graphics Context's Horizontal Resolution) * 1440
+            		= (Image Height in Pixels / Graphics.DpiX) * 1440
+            
+             </summary>
+             <remarks>
+             The Graphics Context's resolution is simply the current resolution at which
+             windows is being displayed.  Normally it's 96 dpi, but instead of assuming
+             I just added the code.
+             
+             According to Ken Howe at pbdr.com, "Twips are screen-independent units
+             used to ensure that the placement and proportion of screen elements in
+             your screen application are the same on all display systems."
+             
+             Units Used
+             ----------
+             1 Twip = 1/20 Point
+             1 Point = 1/72 Inch
+             1 Twip = 1/1440 Inch
+             
+             1 Inch = 2.54 cm
+             1 Inch = 25.4 mm
+             1 Inch = 2540 (0.01)mm
+             </remarks>
+             <param name="_image"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Argumentative.RTF.GdipEmfToWmfBits(System.IntPtr,System.UInt32,System.Byte[],System.Int32,Argumentative.RTF.EmfToWmfBitsFlags)">
+            <summary>
+            Use the EmfToWmfBits function in the GDI+ specification to convert a
+            Enhanced Metafile to a Windows Metafile
+            </summary>
+            <param name="_hEmf">
+            A handle to the Enhanced Metafile to be converted
+            </param>
+            <param name="_bufferSize">
+            The size of the buffer used to store the Windows Metafile bits returned
+            </param>
+            <param name="_buffer">
+            An array of bytes used to hold the Windows Metafile bits returned
+            </param>
+            <param name="_mappingMode">
+            The mapping mode of the image.  This control uses MM_ANISOTROPIC.
+            </param>
+            <param name="_flags">
+            Flags used to specify the format of the Windows Metafile returned
+            </param>
+        </member>
+        <member name="M:Argumentative.RTF.GetRtfImage(System.Drawing.Image)">
+            <summary>
+            Wraps the image in an Enhanced Metafile by drawing the image onto the
+            graphics context, then converts the Enhanced Metafile to a Windows
+            Metafile, and finally appends the bits of the Windows Metafile in HEX
+            to a string and returns the string.
+            </summary>
+            <param name="_image"></param>
+            <returns>
+            A string containing the bits of a Windows Metafile in HEX
+            </returns>
+        </member>
+        <member name="M:Argumentative.RTF.GetFontTable(System.Drawing.Font)">
+            <summary>
+            Creates a font table from a font object.  When an Insert or Append 
+            operation is performed a font is either specified or the default font
+            is used.  In any case, on any Insert or Append, only one font is used,
+            thus the font table will always contain a single font.  The font table
+            should have the form ...
+            
+            {\fonttbl{\f0\[FAMILY]\fcharset0 [FONT_NAME];}
+            </summary>
+            <param name="_font"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.RTF.GetColorTable(Argumentative.RTF.RtfColor,Argumentative.RTF.RtfColor)">
+            <summary>
+            Creates a font table from the RtfColor structure.  When an Insert or Append
+            operation is performed, _textColor and _backColor are either specified
+            or the default is used.  In any case, on any Insert or Append, only three
+            colours are used.  The default color of the RichTextBox (signified by a
+            semicolon (;) without a definition), is always the first colour (index 0) in
+            the colour table.  The second colour is always the text colour, and the third
+            is always the highlight colour (colour behind the text).  The color table
+            should have the form ...
+            
+            {\colortbl ;[TEXT_COLOR];[HIGHLIGHT_COLOR];}
+            
+            </summary>
+            <param name="_textColor"></param>
+            <param name="_backColor"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Argumentative.RTF.RtfColor">
+            <summary>
+            Enum for possible RTF colors. See http://en.wikipedia.org/wiki/Web_colors#HTML_color_names
+            </summary>
+        </member>
+        <member name="F:Argumentative.RTF.RtfColor.Black">
+            <summary>Black</summary>
+        </member>
+        <member name="F:Argumentative.RTF.RtfColor.Maroon">
+            <summary>Dark red #800000</summary>
+        </member>
+        <member name="F:Argumentative.RTF.RtfColor.Green">
+            <summary>Green #008000</summary>
+        </member>
+        <member name="F:Argumentative.RTF.RtfColor.Olive">
+            <summary>Dark green #808000</summary>
+        </member>
+        <member name="F:Argumentative.RTF.RtfColor.Navy">
+            <summary>Dark blue #000080</summary>
+        </member>
+        <member name="F:Argumentative.RTF.RtfColor.Purple">
+            <summary>Purple #800080</summary>
+        </member>
+        <member name="F:Argumentative.RTF.RtfColor.Teal">
+            <summary>Blue-green #008080</summary>
+        </member>
+        <member name="F:Argumentative.RTF.RtfColor.Gray">
+            <summary>Grey #808080</summary>
+        </member>
+        <member name="F:Argumentative.RTF.RtfColor.Silver">
+            <summary>Silver #C0C0C0</summary>
+        </member>
+        <member name="F:Argumentative.RTF.RtfColor.Red">
+            <summary>Red #FF0000</summary>
+        </member>
+        <member name="F:Argumentative.RTF.RtfColor.Lime">
+            <summary>Lime #00FF00</summary>
+        </member>
+        <member name="F:Argumentative.RTF.RtfColor.Yellow">
+            <summary>Yellow #FFFF00</summary>
+        </member>
+        <member name="F:Argumentative.RTF.RtfColor.Blue">
+            <summary>Blue #0000FF</summary>
+        </member>
+        <member name="F:Argumentative.RTF.RtfColor.Fuchsia">
+            <summary>Fuchia, Light purple #FF00FF</summary>
+        </member>
+        <member name="F:Argumentative.RTF.RtfColor.Aqua">
+            <summary>Aqua #00FFFF</summary>
+        </member>
+        <member name="F:Argumentative.RTF.RtfColor.White">
+            <summary>White #FFFFFF</summary>
+        </member>
+        <member name="T:Argumentative.tests.TestArgument">
+            <summary>Test the Argument object</summary>
+        </member>
+        <member name="M:Argumentative.tests.TestArgument.TestArgNew">
+            <summary>Creating a default argument</summary>
+        </member>
+        <member name="M:Argumentative.tests.TestArgument.TestStats">
+            <summary>Test statistics against the default argument</summary>
+        </member>
+        <member name="M:Argumentative.tests.TestArgument.TestArgumentOperations">
+            <summary></summary>
+        </member>
+        <member name="M:Argumentative.tests.TestArgument.TestArgumentXML">
+            <summary>
+            Export and import an argument using XML in a string.
+            </summary>
+        </member>
+        <member name="T:Argumentative.tests.TestI18N">
+            <summary>
+            Test internationalisation functionality.
+            </summary>
+        </member>
+        <member name="M:Argumentative.tests.TestI18N.TestStrings">
+            <summary>
+            String retrieval
+            </summary>
+        </member>
+        <member name="T:Argumentative.tests.TestNode">
+            <summary>
+            Test Node operations
+            </summary>
+        </member>
+        <member name="M:Argumentative.tests.TestNode.TestNewAndAdd">
+            <summary>
+            Creating and adding element nodes.
+            </summary>
+        </member>
+        <member name="M:Argumentative.tests.TestNode.TestChange">
+            <summary>
+            Changing nodes
+            </summary>
+        </member>
+        <member name="M:Argumentative.tests.TestNode.TestKids">
+            <summary>
+            Test adding child nodes
+            </summary>
+        </member>
+        <member name="T:Argumentative.tests.TestPrefs">
+            <summary>
+            Preference testing
+            </summary>
+        </member>
+        <member name="M:Argumentative.tests.TestPrefs.TestString">
+            <summary>Set and retrieve a string preference.</summary>
+        </member>
+        <member name="M:Argumentative.tests.TestPrefs.TestInt">
+            <summary>Set and retrieve a int number preference.</summary>
+        </member>
+        <member name="M:Argumentative.tests.TestPrefs.TestBool">
+            <summary>Set and retrieve a boolean preference.</summary>
+        </member>
+        <member name="M:Argumentative.tests.TestPrefs.TestColour">
+            <summary>Set and retrieve a colour preference.</summary>
+        </member>
+        <member name="M:Argumentative.tests.TestPrefs.TestOriginal">
+            <summary>The original set of tests for preferences.</summary>
+        </member>
+        <member name="T:Argumentative.tests.TestTransform">
+            <summary>
+            Tests the Transform engine
+            </summary>
+        </member>
+        <member name="M:Argumentative.tests.TestTransform.TestBasicTransform">
+            <summary>
+            Does a basic transform run without error?
+            </summary>
+        </member>
+        <member name="T:Argumentative.Tokeniser">
+            <summary>Tokenises a RE3 file</summary>
+        </member>
+        <member name="M:Argumentative.Tokeniser.#ctor(System.String)">
+            <summary>
+            Starts the tokeniser
+            </summary>
+            <param name="fileName">File to tokenise</param>
+        </member>
+        <member name="M:Argumentative.Tokeniser.close">
+            <summary>Closes down the tokeniser</summary>
+        </member>
+        <member name="M:Argumentative.Tokeniser.getNextToken">
+            <summary>
+            Get the next token from the RE3 file
+            </summary>
+            <returns>The token type</returns>
+        </member>
+        <member name="M:Argumentative.Tokeniser.getTokenType">
+            <summary>Get current token type</summary>
+            <returns>Current token type</returns>
+        </member>
+        <member name="M:Argumentative.Tokeniser.getToken_string">
+            <summary>String value of current token.</summary>
+            <returns>String value.</returns>
+        </member>
+        <member name="M:Argumentative.Tokeniser.getLongValue">
+            <summary>Current token if a number</summary>
+            <returns>Converted number.</returns>
+        </member>
+        <member name="T:Argumentative.Tokeniser.TokenType">
+            <summary>Token types recognised.</summary>
+        </member>
+        <member name="F:Argumentative.Tokeniser.TokenType.T_Eof">
+            <summary>End of File</summary>
+        </member>
+        <member name="F:Argumentative.Tokeniser.TokenType.T_Null">
+            <summary>Undefined token</summary>
+        </member>
+        <member name="F:Argumentative.Tokeniser.TokenType.T_Label">
+            <summary>Label token</summary>
+        </member>
+        <member name="F:Argumentative.Tokeniser.TokenType.T_Node">
+            <summary>Node definition</summary>
+        </member>
+        <member name="F:Argumentative.Tokeniser.TokenType.T_Nodes">
+            <summary>A collection of nodes</summary>
+        </member>
+        <member name="F:Argumentative.Tokeniser.TokenType.T_Edge">
+            <summary>Edge token represts a line</summary>
+        </member>
+        <member name="F:Argumentative.Tokeniser.TokenType.T_Edges">
+            <summary>Collection of edges</summary>update here
+        </member>
+        <member name="F:Argumentative.Tokeniser.TokenType.T_Number">
+            <summary>Number token</summary>
+        </member>
+        <member name="F:Argumentative.Tokeniser.TokenType.T_String">
+            <summary>String token</summary>
+        </member>
+        <member name="T:Argumentative.Transform">
+            <summary>
+            Transforms an argument using XSLT
+            </summary>
+        </member>
+        <member name="M:Argumentative.Transform.doTransform(System.String,System.String,System.String,Argumentative.Argument)">
+            <summary>
+            Transform argument through XSL
+            </summary>
+            <param name="filename">Source AXL file name</param>
+            <param name="stylesheet">XSLT Stylesheet file</param>
+            <param name="outfilename">Output File Name</param>
+            <param name="arg">Current argument</param>
+            <returns></returns>
+        </member>
+        <member name="T:Argumentative.ImageXSLextension">
+            <summary>
+            Converts all or part of an image to RTF.  Used as an XSL extension
+            </summary>
+        </member>
+        <member name="M:Argumentative.ImageXSLextension.#ctor(Argumentative.Argument,System.String)">
+            <summary>
+            Constructor for ImageXSLextension
+            </summary>
+            <param name="arg">The current argument map</param>
+            <param name="filePath">The path the XSL output is being rendered to</param>
+        </member>
+        <member name="M:Argumentative.ImageXSLextension.ImageToRTF(System.String)">
+            <summary>
+            Converts the argument element referred to a picture in RTF format. 
+            The sub elements are also rendered in the image.
+            </summary>
+            <param name="reference">Element reference e.g "1.1"</param>
+            <returns></returns>
+        </member>
+        <member name="M:Argumentative.ImageXSLextension.ImageToPNG(System.String,System.String)">
+            <summary>
+            Converts an element to a PNG file.
+            </summary>
+            <param name="reference"></param>
+            <param name="fileName">File name for PNG file</param>
+            <returns></returns>
+        </member>
+        <member name="T:Argumentative.TransformDlg">
+            <summary>
+            Summary description for TransformDlg.
+            </summary>
+        </member>
+        <member name="F:Argumentative.TransformDlg.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Argumentative.TransformDlg.#ctor(Argumentative.ArgMapInterface)">
+            <summary>
+            Transformation (using XSLT) dialog box
+            </summary>
+            <param name="a"></param>
+        </member>
+        <member name="M:Argumentative.TransformDlg.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Argumentative.TransformDlg.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

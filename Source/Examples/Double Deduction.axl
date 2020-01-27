@@ -1,0 +1,30 @@
+<argument>
+<author>John</author>
+<premise>
+<title>Hence, you see, my double deduction that you had been out in vile weather, and that you had a particularly malignant boot-slitting specimen of the London slavery</title>
+<comment>From http://en.wikipedia.org/wiki/Sherlock_Holmes#Holmesian_.28or_Sherlockian.29_deduction
+An extract from "A Scandal in Bohemia"
+"It is simplicity itself... My eyes tell me that on the inside of your left shoe, just where the firelight strikes it, the leather is scored by six almost parallel cuts. Obviously they have been caused by someone who has very carelessly scraped round the edges of the sole in order to remove crusted mud from it. Hence, you see, my double deduction that you had been out in vile weather, and that you had a particularly malignant boot-slitting specimen of the London slavery."</comment>
+<reason>
+<title>Watson's servant girl is clumsy and careless.</title>
+<reason>
+<title>If someone cuts a shoe while scraping it to remove encrusted mud, that person is clumsy and careless.</title>
+<reason>
+<title>If leather on the side of a shoe is scored by several parallel cuts, it was caused by someone who scraped around the edges of the sole in order to remove crusted mud</title>
+</reason>
+<helper>
+<title>If a 19th-century London doctor's shoes are scraped to remove crusted mud, the person who so scraped them is the doctor's servant girl.</title>
+</helper>
+<helper>
+<title>The sides of Watson's shoes are scored by several parallel cuts.</title>
+</helper>
+</reason>
+</reason>
+<reason>
+<title>Watson has been very wet lately and has been out in vile weather.</title>
+<helper>
+<title>If someone's shoes had encrusted mud on them, that person has been very wet lately and has been out in vile weather.</title>
+</helper>
+</reason>
+</premise>
+</argument>
